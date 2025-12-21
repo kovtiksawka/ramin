@@ -18,7 +18,7 @@ export default function Home() {
       />
       </div>
       <div className={styles.trainer}>Персональный тренер</div>
-       <div className={styles.name}>Рамин Гасановfffff</div>
+       <div className={styles.name}>Рамин Гасанов</div>
        <div className={styles.title}>Мастер спорта по боевому самбо</div>
 
       <div className={styles.description}>
