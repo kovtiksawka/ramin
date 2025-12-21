@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from './page.module.scss'
-import trainer from '../../public/ramin.png'
+import trainer from '../../public/ramin.webp'
 import { Phone } from 'lucide-react'
 
 export default function Home() {
