@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Рамин Гасанов — персональный тренер",
     description: "Более 20 лет опыта. Запишись на бесплатную тренировку сегодня!",
-    //url: "https://example.com",
+    url: "https://ramin-gasanov.vercel.app/",
     siteName: "Рамин Гасанов",
     type: "website",
   },
