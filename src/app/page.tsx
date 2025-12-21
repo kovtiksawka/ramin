@@ -19,7 +19,12 @@ export default function Home() {
       </div>
       <div className={styles.trainer}>Персональный тренер</div>
        <div className={styles.name}>Рамин Гасанов</div>
-       <div className={styles.title}>Мастер спорта по боевому самбо</div>
+       <div className={styles.titlesLabel}>Мастер спорта по:</div>
+       <div className={styles.titlesContainer}>
+          <span className={styles.titlePill}>Боевое самбо</span>
+          <span className={styles.titlePill}>КЕ</span>
+          <span className={styles.titlePill}>Рукопашный бой</span>
+        </div>
 
       <div className={styles.description}>
         Опыт тренерской работы более 20 лет. Индивидуальные и групповые тренировки: сила, выносливость, координация, набор массы и снижение веса.
