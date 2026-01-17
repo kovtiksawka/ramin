@@ -51,6 +51,81 @@ export default function Home() {
           <div className={styles.statLabel}>учеников с результатами</div>
         </div>
       </div>
+
+      <section className={styles.mediaSection}>
+        <h2 className={styles.mediaTitle}>Фото и видео тренировок</h2>
+
+        <div className={styles.gallery}>
+          <div className={styles.mediaItem}>
+            <Image
+              src="/photos/1.jpg"
+              alt="Рамин Гасанов — тренировка"
+              width={400}
+              height={300}
+              className={styles.mediaImage}
+            />
+            <div className={styles.mediaOverlay}></div>
+          </div>
+
+          <div className={styles.mediaItem}>
+            <Image
+              src="/photos/2.jpg"
+              alt="Рамин Гасанов — тренировка"
+              width={400}
+              height={300}
+              className={styles.mediaImage}
+            />
+            <div className={styles.mediaOverlay}></div>
+          </div>
+
+          <div className={styles.mediaItem}>
+            <Image
+              src="/photos/3.jpg"
+              alt="Рамин Гасанов — тренировка"
+              width={400}
+              height={300}
+              className={styles.mediaImage}
+            />
+            <div className={styles.mediaOverlay}></div>
+          </div>
+
+          <div className={styles.mediaItem}>
+            <video controls preload="none" poster="/videos/1-poster.jpg">
+              <source src="/videos/1.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div className={styles.mediaItem}>
+            <video controls preload="none" poster="/videos/2-poster.jpg">
+              <source src="/videos/2.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div className={styles.mediaItem}>
+            <video controls preload="none" poster="/videos/3-poster.jpg">
+              <source src="/videos/3.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div className={styles.mediaItem}>
+            <video controls preload="none" poster="/videos/4-poster.jpg">
+              <source src="/videos/4.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div className={styles.mediaItem}>
+            <video controls preload="none" poster="/videos/5-poster.jpg">
+              <source src="/videos/5.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div className={styles.mediaItem}>
+            <video controls preload="none" poster="/videos/6-poster.jpg">
+              <source src="/videos/6.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
