@@ -90,6 +90,72 @@ export default function Home() {
           </div>
 
           <div className={styles.mediaItem}>
+            <Image
+              src="/photos/4.jpg"
+              alt="Рамин Гасанов — тренировка"
+              width={400}
+              height={300}
+              className={styles.mediaImage}
+            />
+            <div className={styles.mediaOverlay}></div>
+          </div>
+
+          <div className={styles.mediaItem}>
+            <Image
+              src="/photos/5.jpg"
+              alt="Рамин Гасанов — тренировка"
+              width={400}
+              height={300}
+              className={styles.mediaImage}
+            />
+            <div className={styles.mediaOverlay}></div>
+          </div>
+
+          <div className={styles.mediaItem}>
+            <Image
+              src="/photos/6.jpg"
+              alt="Рамин Гасанов — тренировка"
+              width={400}
+              height={300}
+              className={styles.mediaImage}
+            />
+            <div className={styles.mediaOverlay}></div>
+          </div>
+
+          <div className={styles.mediaItem}>
+            <Image
+              src="/photos/7.jpg"
+              alt="Рамин Гасанов — тренировка"
+              width={400}
+              height={300}
+              className={styles.mediaImage}
+            />
+            <div className={styles.mediaOverlay}></div>
+          </div>
+
+          <div className={styles.mediaItem}>
+            <Image
+              src="/photos/8.jpg"
+              alt="Рамин Гасанов — тренировка"
+              width={400}
+              height={300}
+              className={styles.mediaImage}
+            />
+            <div className={styles.mediaOverlay}></div>
+          </div>
+
+          <div className={styles.mediaItem}>
+            <Image
+              src="/photos/9.jpg"
+              alt="Рамин Гасанов — тренировка"
+              width={400}
+              height={300}
+              className={styles.mediaImage}
+            />
+            <div className={styles.mediaOverlay}></div>
+          </div>
+
+          <div className={styles.mediaItem}>
             <video controls preload="none" poster="/videos/1-poster.jpg">
               <source src="/videos/1.mp4" type="video/mp4" />
             </video>
