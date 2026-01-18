@@ -2,8 +2,37 @@ import Image from 'next/image'
 import styles from './page.module.scss'
 import trainer from '../../public/ramin.webp'
 import { Phone } from 'lucide-react'
+import { Gallery } from './components/Gallery';
 
 export default function Home() {
+  const awardsData = [
+  {
+    category: "Чемпионаты России",
+    items: [
+      "Чемпион России по КЕ",
+      "Чемпион Всероссийского турнира памяти Васильева по боевому самбо",
+      "Чемпион Всероссийского турнира памяти Рябухина",
+      "Бронзовый призер Кубка России по КЕ"
+    ]
+  },
+  {
+    category: "Региональные чемпионаты",
+    items: [
+      "Чемпион Северо-Запада по боевому самбо",
+      "Чемпион Санкт-Петербурга и Ленинградской области по боевому самбо",
+      "Серебряный призер Санкт-Петербурга и Ленинградской области по рукопашному бою",
+      "Чемпион Кубка Санкт-Петербурга и Ленинградской области по панкратиону",
+      "Серебряный призер чемпионата Санкт-Петербурга по спортивному самбо"
+    ]
+  },
+  {
+    category: "Международные турниры",
+    items: [
+      "Бронзовый призер международного турнира на призы ОДКБ"
+    ]
+  },
+];
+
   return (
     <div className={styles.container}>
       <div className={styles.imageContainer}>
@@ -52,146 +81,31 @@ export default function Home() {
         </div>
       </div>
 
-      <section className={styles.mediaSection}>
-        <h2 className={styles.mediaTitle}>Фото и видео тренировок</h2>
-
-        <div className={styles.gallery}>
-          <div className={styles.mediaItem}>
-            <Image
-              src="/photos/1.jpg"
-              alt="Рамин Гасанов — тренировка"
-              width={400}
-              height={300}
-              className={styles.mediaImage}
-            />
-            <div className={styles.mediaOverlay}></div>
-          </div>
-
-          <div className={styles.mediaItem}>
-            <Image
-              src="/photos/2.jpg"
-              alt="Рамин Гасанов — тренировка"
-              width={400}
-              height={300}
-              className={styles.mediaImage}
-            />
-            <div className={styles.mediaOverlay}></div>
-          </div>
-
-          <div className={styles.mediaItem}>
-            <Image
-              src="/photos/3.jpg"
-              alt="Рамин Гасанов — тренировка"
-              width={400}
-              height={300}
-              className={styles.mediaImage}
-            />
-            <div className={styles.mediaOverlay}></div>
-          </div>
-
-          <div className={styles.mediaItem}>
-            <Image
-              src="/photos/4.jpg"
-              alt="Рамин Гасанов — тренировка"
-              width={400}
-              height={300}
-              className={styles.mediaImage}
-            />
-            <div className={styles.mediaOverlay}></div>
-          </div>
-
-          <div className={styles.mediaItem}>
-            <Image
-              src="/photos/5.jpg"
-              alt="Рамин Гасанов — тренировка"
-              width={400}
-              height={300}
-              className={styles.mediaImage}
-            />
-            <div className={styles.mediaOverlay}></div>
-          </div>
-
-          <div className={styles.mediaItem}>
-            <Image
-              src="/photos/6.jpg"
-              alt="Рамин Гасанов — тренировка"
-              width={400}
-              height={300}
-              className={styles.mediaImage}
-            />
-            <div className={styles.mediaOverlay}></div>
-          </div>
-
-          <div className={styles.mediaItem}>
-            <Image
-              src="/photos/7.jpg"
-              alt="Рамин Гасанов — тренировка"
-              width={400}
-              height={300}
-              className={styles.mediaImage}
-            />
-            <div className={styles.mediaOverlay}></div>
-          </div>
-
-          <div className={styles.mediaItem}>
-            <Image
-              src="/photos/8.jpg"
-              alt="Рамин Гасанов — тренировка"
-              width={400}
-              height={300}
-              className={styles.mediaImage}
-            />
-            <div className={styles.mediaOverlay}></div>
-          </div>
-
-          <div className={styles.mediaItem}>
-            <Image
-              src="/photos/9.jpg"
-              alt="Рамин Гасанов — тренировка"
-              width={400}
-              height={300}
-              className={styles.mediaImage}
-            />
-            <div className={styles.mediaOverlay}></div>
-          </div>
-
-          <div className={styles.mediaItem}>
-            <video controls preload="none" poster="/videos/1-poster.jpg">
-              <source src="/videos/1.mp4" type="video/mp4" />
-            </video>
-          </div>
-
-          <div className={styles.mediaItem}>
-            <video controls preload="none" poster="/videos/2-poster.jpg">
-              <source src="/videos/2.mp4" type="video/mp4" />
-            </video>
-          </div>
-
-          <div className={styles.mediaItem}>
-            <video controls preload="none" poster="/videos/3-poster.jpg">
-              <source src="/videos/3.mp4" type="video/mp4" />
-            </video>
-          </div>
-
-          <div className={styles.mediaItem}>
-            <video controls preload="none" poster="/videos/4-poster.jpg">
-              <source src="/videos/4.mp4" type="video/mp4" />
-            </video>
-          </div>
-
-          <div className={styles.mediaItem}>
-            <video controls preload="none" poster="/videos/5-poster.jpg">
-              <source src="/videos/5.mp4" type="video/mp4" />
-            </video>
-          </div>
-
-          <div className={styles.mediaItem}>
-            <video controls preload="none" poster="/videos/6-poster.jpg">
-              <source src="/videos/6.mp4" type="video/mp4" />
-            </video>
-          </div>
+      
+    <section className={styles.awardsSection}>
+  <h2 className={styles.awardsTitle}>🏆 Награды и достижения</h2>
+  
+  <div className={styles.awardsGrid}>
+    {awardsData.map((group, i) => (
+      <div key={i} className={styles.awardCard}>
+        <div className={styles.awardHeader}>
+          <span className={styles.awardIcon}>🥇</span>
+          <h3 className={styles.awardCategory}>{group.category}</h3>
         </div>
-      </section>
+        <ul className={styles.awardList}>
+          {group.items.map((item, idx) => (
+            <li key={idx} className={styles.awardItem}>
+              <span className={styles.bullet}></span>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</section>
+
+      <Gallery />
     </div>
   )
 }
